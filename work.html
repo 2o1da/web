@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="utf-8">
+        <title>semantic</title>
+        
+        <style>
+            p { color: gray;}
+        </style> <!--internal-->
+
+        <link rel="stylesheet" href="./work.css"> <!--external, 용량도 적고 관리하기 쉬워서 가장 많이 사용함-->
+        <!--stylesheet:CSS파일 연결할 때 사용-->
+        
+        </head>
+    <body>
+        <b>굵은</b> vs <strong>중요한</strong><br>
+        <i>기울어진</i> vs <em>강조하는</em><br>
+        <u>밑줄친</u> vs <ins>새롭게 추가된</ins><br> <!--ins:insert-->
+        <s>중간선이 있는</s> vs <del>삭제된</del>
+
+        <p style="color: gray;">Hello, CSS</p> <!--inline-->
+    </body>
+</html>
+
+<!--
+    <article>:본문의 주 내용이 들어가는 공간
+    <aside>:주 내용과 간접적으로만 연관된 부분 표현, 사이드바 혹은 콜아웃 박스
+    <figcaption>:<figure>내 컨텐츠에 대한 캡션(설명)
+    <figure>:그림,도표,사진과 같은 독립적인 컨텐츠 표현
+    <footer>:문서, 구역의 바닥글,꼬리말을 정의
+    <header>:머릿말
+    <main>:본문, 주요 컨텐츠
+    <mark>:텍스트 일부 강조
+    <nav>:문서 부분 중 현재 페이지 내, 또는 다른 페이지 링크 보여주는 구문, navigation
+    <section>:문서 구역 정의
+    <time>:특정 시간이나 날짜 정의
+-->
+
+<!--
+    block level 요소 : 한줄에 하나의 요소 표시, div, p, h
+    inline level 요소 : 한줄에 여러개의 요소 표시, span, a
+
+    inline level 안에 block level 넣을 수 없음
+    예외:a(anchor)요소는 어떠한 요소도 자식으로 받을 수 있음, html5
+-->
+
+
+<!--class 선택자는 요소에 구애받지 않고 스타일 규칙을 적용할 수 있는 가장 일반적인 방법-->
+
+    .foo {font-size:30px;}
+    .bar {color:blue;}
+    <p class="foo bar"></p> <!--다중 class-->
+
+<head>
+    <meta charset="utf-8">
+    <title>css</title>
+    <style media="screen">
+        .html {color: purple;}
+        .css {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <dl>
+        <dt class="html">HTML</dt>
+        <dd><span class="html">HTML</span>은 문서의 구조를 나타냅니다.</dd>
+        <dt class="css">CSS</dt>
+        <dd><span class="css">CSS</span>는 문서의 표현을 나타냅니다.</dd>
+    </dl>
+</body>
+
+<!--ID 선택자, class 선택자와 유사, 문서내에서 유일한 요소에 사용-->
+#bar {background-color:yellow;}
+<p id="bar"></p>
+
+<!--선택자의 조합-->
+p.bar{} <!--요소와 클래스-->
+.foo.bar{} <!--다중 클래스-->
+#foo.bar{} <!--아이디와 클래스-->ㅇ
+
+<!--속성 선택자-->
+<!--단일 속성으로 선택, 태그이름[속성]-->
+<head>
+    <meta charset="utf-8">
+    <title>css</title>
+    <style media="screen">
+        p[class]{color:silver;}
+        p[class][id]{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <p class="foo">Hello</p>
+    <p class="bar">CSS</p>
+    <p class="baz" id="title">HTML</p>
+</body>
+
+<!--정확한 속성값으로 선택, 태그이름[속성="값"]-->
+p[class="foo"]{color:silver;}
+p[id="title"]{text-decoration:underline;}
+
+<!--부분 속성값으로 선택-->
+[class~="bar"]:class 속성값이 공백으로 구분한 bar가 포함된 요소 선택
+[class^="bar"]:bar로 시작하는 요소 선택
+[class$="bar"]:bar로 끝나는 요소 선택
+[class*="bar"]:bar 문자가 포함된 요소 선택
+
+
+<!--문서 구조 관련 선택자-->
+<head>
+    <meta charset="utf-8">
+    <title>css</title>
+    <style media="screen"> 
+        div span {color:red;} /*자손 선택자*/
+        div > span {color:red;} /*자식 선택자*/
+        div+span{color:red;} /*인접 형제 선택자*/
+    </style>
+</head>
+<body>
+    <div>
+        <h1><span>HTML</span>:Hyper Text Markup Language</h1>
+        <span>CSS는 문서를 꾸며줍니다.</span>
+    </div>
+    <span>JS는 문서를 동적으로 제어할 수 있습니다.</span>
+</body>
