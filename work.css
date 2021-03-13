@@ -5,3 +5,19 @@ h2
     color:yellow; 
     font-size: 2em;
 }
+
+body, h3, p {
+    padding:0;
+    margin:0;
+}
+.container{
+}
+.item{
+    padding:5%;
+}
+.item-a{
+    background-color:yellow;
+}
+.item_b{
+    background_color:yellowgreen;
+}
