@@ -9,13 +9,10 @@
 >
 > You know life can be long
 > 
-
 > You've got to be so strong
 > 
-
 > And the world she is tough
 > 
-
 > Sometimes I feel I've had enough
 ---
 ```
