@@ -1,3 +1,3 @@
 # web
 
-![과제](./Desktop/screenshot.png)
+![과제](./Desktop/screenshot)
