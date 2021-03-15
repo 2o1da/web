@@ -7,13 +7,13 @@
 > How can I give love when love is something I ain't never had?  
 > Oh no, oh no  
 >
-> You know life can be long
-> 
-> You've got to be so strong
-> 
-> And the world she is tough
-> 
+> You know life can be long  
+> You've got to be so strong  
+> And the world she is tough  
 > Sometimes I feel I've had enough
+> 
+>
+>
 ---
 ```
 return peace && love;
